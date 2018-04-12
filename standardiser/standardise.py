@@ -171,23 +171,23 @@ def run(input_mol, output_rules_applied=None, verbose=False):
 
 # Check for availability of timeout before enabling (see above for details)...
 
-import platform
+# import platform
 
-if platform.system() == 'Windows':
+# if platform.system() == 'Windows':
 
-    logger.warning("Running under Windows: must disable use of timeout")
+#     logger.warning("Running under Windows: must disable use of timeout")
 
-else:
+# else:
 
-    try:
+#     try:
 
-        from mod_wsgi import version
+#         from mod_wsgi import version
 
-        logger.warning("Running under mod_wsgi: must disable use of timeout")
+#         logger.warning("Running under mod_wsgi: must disable use of timeout")
 
-    except:
+#     except:
 
-        run = timeout()(run)
+#         run = timeout()(run)
 
 ####################################################################################################
 # End
